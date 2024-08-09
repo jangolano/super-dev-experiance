@@ -37,9 +37,20 @@ import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
     import {githubAuthApiRef} from "@backstage/core-plugin-api";
+    import {UnifiedThemeProvider} from "@backstage/theme";
+    import {customTheme} from "./theme/custom-theme";
 
 const app = createApp({
   apis,
+    themes: [{
+        id: 'my-theme',
+        title: 'My Custom Theme',
+        variant: 'light',
+        // icon: <LightIcon />,
+        Provider: ({ children }) => (
+            <UnifiedThemeProvider theme={customTheme} children={children} />
+        ),
+    }],
   bindRoutes({ bind }) {
     bind(catalogPlugin.externalRoutes, {
       createComponent: scaffolderPlugin.routes.root,
