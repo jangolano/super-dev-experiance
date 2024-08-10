@@ -41,6 +41,7 @@ import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/
     import {customTheme} from "./theme/custom-theme";
     import {HomepageCompositionRoot} from "@backstage/plugin-home";
     import {HomePage} from "./components/home/HomePage";
+    import {BazaarPage} from "@backstage-community/plugin-bazaar";
 
 const app = createApp({
   apis,
@@ -115,6 +116,7 @@ const routes = (
         </RequirePermission>
       }
     />
+      <Route path="bazaar" element={<BazaarPage />} />
     <Route path="/search" element={<SearchPage />}>
       {searchPage}
     </Route>

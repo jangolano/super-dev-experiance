@@ -30,6 +30,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import { MyGroupsSidebarItem } from '@backstage/plugin-org';
 import GroupIcon from '@material-ui/icons/People';
 import { useApp } from '@backstage/core-plugin-api';
+import StorefrontIcon from '@material-ui/icons/Storefront';
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -122,6 +123,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         {/* End global nav */}
         <SidebarDivider />
         <SidebarScrollWrapper>
+          <SidebarItem icon={StorefrontIcon} to="bazaar" text="Bazaar" />
           {/* Items in this group will be scrollable if they run out of space */}
         </SidebarScrollWrapper>
       </SidebarGroup>
