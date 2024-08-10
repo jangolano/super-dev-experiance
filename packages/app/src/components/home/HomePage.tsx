@@ -43,10 +43,10 @@ export const HomePage = () => {
                                 <HomePageStarredEntities/>
                             </Grid>
                             <Grid item xs={12} md={6}>
-                                <FeaturedDocsCard
+                                <FeaturedDocsCard subLinkText=" "
                                       filter={{
                                        'spec.type': 'documentation',
-                                       'metadata.name': 'getting-started-with-backstage',
+                                       'metadata.name': 'how-we-work',
                                    }}
                                    />
                             </Grid>
