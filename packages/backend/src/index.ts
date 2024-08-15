@@ -15,6 +15,7 @@ backend.add(import('@backstage/plugin-proxy-backend/alpha'));
 backend.add(import('@backstage/plugin-scaffolder-backend/alpha'));
 backend.add(import('@backstage/plugin-techdocs-backend/alpha'));
 backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
+backend.add(import('@backstage/plugin-scaffolder-backend-module-github'));
 
 // auth plugin
 backend.add(import('@backstage/plugin-auth-backend'));
